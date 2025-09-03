@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const { i18n } = require("./next-i18next.config");
 
-export default nextConfig;
+module.exports = {
+  i18n,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com'
+      }
+    ]
+  }
+}
+

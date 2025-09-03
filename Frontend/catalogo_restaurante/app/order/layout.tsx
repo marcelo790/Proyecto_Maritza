@@ -7,9 +7,9 @@ export default function RootLayout({
 }>) {
   return (
     <>
-        <div className="md:flex">
+        <div className="contenedor md:flex">
             <OrderSidebar/>
-            <main className="md:flex-1 md:h-screen md:overflow-x-scroll">
+            <main className="contenedor-derecho md:flex-1 md:h-screen overflow-y-auto">
                 {children}
             </main>
         </div>

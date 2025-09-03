@@ -1,0 +1,19 @@
+{
+  "categories": {
+    "ensaladas": "Ensaladas",
+    "entrantes": "Entrantes",
+    "pasta": "Pasta",
+    "pescado": "Pescado",
+    "paellas_y_arroces": "Paellas y Arroces",
+    "carnes": "Carnes",
+    "platos_combinados": "Platos Combinados",
+    "pizzas": "Pizzas",
+    "hamburguesas": "Hamburguesas",
+    "bebidas": "Bebidas",
+    "postres": "Postres",
+    "cafe": "Café",
+    "cafe_con_alcohol": "Café con alcohol",
+    "infusiones_tes": "Infusiones y Tés",
+    "cocteles": "Cócteles"
+  }
+}

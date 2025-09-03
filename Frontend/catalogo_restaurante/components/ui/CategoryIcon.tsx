@@ -14,14 +14,15 @@ export default function CategoryIcon({category} : CategoryIconProps) {
   const params = useParams<{category: string}>();
   return (
     <div
-        className={`${category.slug === params.category ? 'bg-amber-400':''} flex items-center gap-4 w-full  p-3 last-of-type:border-b`}
+        className={`link-category flex items-center gap-4 w-full  p-3 `}
+        style={{ backgroundColor: category.slug === params.category ? '#2C7600' : '' }}
     >
-        <div className='w-6 h-6 relative'>
+        <div className='w-9 h-9 relative'>
           <Image 
             fill
             src={`/categories/${category.slug}.svg`} alt='Imagen Categoria'/>
         </div>
-        <Link className='text-sm font-bold uppercase'
+        <Link
               href={`/order/${category.slug}`}>
           {category.name}
         </Link>

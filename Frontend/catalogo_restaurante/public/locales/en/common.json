@@ -1,0 +1,19 @@
+{
+  "categories": {
+    "ensaladas": "Salads",
+    "entrantes": "Starters",
+    "pasta": "Pasta",
+    "pescado": "Fish",
+    "paellas_y_arroces": "Paellas And Rice",
+    "carnes": "Meats",
+    "platos_combinados": "Mixed Dishes",
+    "pizzas": "Pizzas",
+    "hamburguesas": "Burgers",
+    "bebidas": "Drinks",
+    "postres": "Desserts",
+    "cafe": "Coffee",
+    "cafe_con_alcohol": "Coffee with Alcohol",
+    "infusiones_tes": "Infusions And Teas",
+    "cocteles": "Cocktails"
+  }
+}

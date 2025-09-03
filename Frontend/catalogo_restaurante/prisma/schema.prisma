@@ -9,10 +9,10 @@ datasource db {
 }
 
 model Category {
-  id  Int @id   @default(autoincrement())
-  name String 
-  slug  String
-  products Product[] 
+  id       Int       @id @default(autoincrement())
+  name     String
+  slug     String    @unique   // ✅ ahora cada slug debe ser único
+  products Product[]
 }
 
 model Product {
@@ -21,6 +21,7 @@ model Product {
    price Float
    image String
    description String
+   type String
    categoryId Int
    category Category @relation(fields: [categoryId], references: [id])
 }

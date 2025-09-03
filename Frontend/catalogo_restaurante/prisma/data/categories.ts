@@ -34,5 +34,29 @@ export const categories = [
       {
         slug: "hamburguesas",
         name: "Hamburguesas"
-      }
+      },
+      {
+        slug: "bebidas",
+        name: "Bebidas"
+      },
+      {
+        slug: "postres",
+        name: "Postres"
+      },
+      {
+        slug: "cafe",
+        name: "Café"
+      },
+      {
+        slug: "cafe_con_alcohol",
+        name: "Café con alcohol"
+      },
+      {
+        slug: "Infusiones_tes",
+        name: "Infusiones Y Tés"
+      },
+      {
+        slug: "cocteles",
+        name: "Cócteles"
+      },
 ]
