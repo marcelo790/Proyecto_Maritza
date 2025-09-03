@@ -5,10 +5,17 @@ import Heading from "@/components/ui/Heading"
 import { prisma } from "@/src/lib/prisma"
 import { notFound } from "next/navigation"
 
+
+type EditCategoriesPageProps = {
+  params: {
+    id: string;
+  };
+}
+
 async function getCategoryById(id: number){
     const category = await prisma.category.findUnique({
         where: {
-            id
+            id,
         }
     })
     if(!category){
@@ -17,8 +24,9 @@ async function getCategoryById(id: number){
     return category
 }
 
-export default async function EditCategoriesPage({params}: {params: {id: string}}) {
-    const category = await getCategoryById(+params.id)
+export default async function EditCategoriesPage({ params }: EditCategoriesPageProps) {
+  const category = await getCategoryById(Number(params.id));
+
   return (
     <>
         <Heading>Editar Categoria: {category.name}</Heading>
