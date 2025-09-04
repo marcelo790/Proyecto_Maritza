@@ -448,7 +448,7 @@ export const products = [
         categoryId: 8
       },
       {
-        name: "Pizza 4 Quesos",
+        name: "Pizza De Quesos",
         price: 12.00,
         image: "pizzas_4_quesos",
         description: "Elemental, Parmesano, Roquefort y Motzarella",      

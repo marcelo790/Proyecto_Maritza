@@ -65,9 +65,14 @@
         font-family: 'Zuumerough-Bold';
     }
 
-.card-product{  
+.card-product{    
     color: #ffffff;
-    text-align: center;
+    text-align: center;       /* centra texto dentro de elementos inline o block */
+    font-family: 'Zuumerough-Bold';
+    display: flex;            /* activa Flexbox */
+    flex-direction: column;   /* organiza hijos en columna */
+    justify-content: center;  /* centra verticalmente */
+    align-items: center;
     //box-shadow: 0 -4px 8px rgba(44, 118, 0, 0.9);
 }
 
