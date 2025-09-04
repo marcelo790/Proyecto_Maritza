@@ -55,7 +55,6 @@
 }
 
 .contenedor-derecho{
-    font-family: 'Zuumerough-Regular';
     text-transform: uppercase;
 }
 .contenedor-derecho h1{
@@ -67,8 +66,7 @@
 
 .card-producto{    
     color: #ffffff;
-    text-align: center;       /* centra texto dentro de elementos inline o block */
-    font-family: 'Zuumerough-Bold';
+    text-align: center;    
     display: flex;            /* activa Flexbox */
     flex-direction: column;   /* organiza hijos en columna */
     justify-content: center;  /* centra verticalmente */
