@@ -43,7 +43,7 @@ export default function ProductCard({product} : ProductCardProps) {
                 <p>{product.description}</p>
                 )}
             
-            <p className="parrafo-precio font-black">
+            <p className="parrafo-precio ">
                 {formatCurrency(product.price)}
             </p>
 
