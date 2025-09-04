@@ -65,7 +65,7 @@
         font-family: 'Zuumerough-Bold';
     }
 
-.card-product{    
+.card-producto{    
     color: #ffffff;
     text-align: center;       /* centra texto dentro de elementos inline o block */
     font-family: 'Zuumerough-Bold';
@@ -78,19 +78,29 @@
 
 .detalle-producto{
   line-height: 1;
+  color: #ffffff;
+    text-align: center;       /* centra texto dentro de elementos inline o block */
+    font-family: 'Zuumerough-Bold';
 }
 
 .detalle-producto h3{  
+  color: #ffffff;
+    text-align: center;       /* centra texto dentro de elementos inline o block */
+    font-family: 'Zuumerough-Bold';
     font-size: 2.5rem;
     letter-spacing: 0.05em;
 }
 
 .detalle-producto p{  
+  color: #ffffff;
+    text-align: center;       /* centra texto dentro de elementos inline o block */
+    font-family: 'Zuumerough-Bold';
     font-size: 1.5rem;
     letter-spacing: 0.05em;
 }
 
 .parrafo-precio{
+  color: #ffffff;
     font-family: sans-serif;
     font-style: normal;
     font-weight: normal

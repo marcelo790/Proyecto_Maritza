@@ -10,7 +10,7 @@ export default function ProductCard({product} : ProductCardProps) {
 
     const imagePath = getImagePath(product.image)
   return (
-    <div className="card-product relative max-w-md aspect-[4/3]">
+    <div className="card-producto relative max-w-md aspect-[4/3]">
         <img 
             width={400}
             height={500}
