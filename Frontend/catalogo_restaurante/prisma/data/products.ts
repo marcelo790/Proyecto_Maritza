@@ -8,10 +8,10 @@ export const products = [
         categoryId: 1
       },
       {
-        name: "Ensalada César",
+        name: "Ensalada Cesar",
         price: 14.00,
         image: "ensalada_cesar",
-        description: "lechuga, zanahoria, maíz, tomate, pechuga, empanada, queso elemental, y salsa César",      
+        description: "lechuga, zanahoria, maíz, tomate, pechuga, empanada, queso elemental, y salsa Cesar",      
         type: "",
         categoryId: 1
       },
@@ -19,7 +19,7 @@ export const products = [
         name: "Ensalada de queso de cabra",
         price: 15,
         image: "ensalada_de_queso_de_cabra",
-        description: "lechuga, tomate, queso de cabra, miel, vinagre balsámico y frutos secos",      
+        description: "lechuga, tomate, queso de cabra, miel, vinagre balsamico y frutos secos",      
         type: "",
         categoryId: 1
       },
@@ -32,7 +32,7 @@ export const products = [
         categoryId: 2
       },
       {
-        name: "Plato de jamón",
+        name: "Plato de jamon",
         price: 22.00,
         image: "plato_de_jamon",
         description: "",      
@@ -96,10 +96,10 @@ export const products = [
         categoryId: 2
       },
       {
-        name: "Croquetas ibéricas",
+        name: "Croquetas ibericas",
         price: 7.00,
         image: "croquetas_ibericas",
-        description: "6 unidades de croquetas ibéricas",      
+        description: "6 unidades de croquetas ibericas",      
         type: "",
         categoryId: 2
       },
@@ -288,7 +288,7 @@ export const products = [
         categoryId: 5
       },
       {
-        name: "Arroz con Secreto Ibérico y Boletus",
+        name: "Arroz con Secreto Iberico y Boletus",
         price: 17.00,
         image: "arroz_con_secreto",
         description: "",      
@@ -352,7 +352,7 @@ export const products = [
         categoryId: 6
       },
       {
-        name: "Secreto Ibérico",
+        name: "Secreto Iberico",
         price: 20.00,
         image: "secreto_iberico",
         description: "",      
@@ -488,10 +488,10 @@ export const products = [
         categoryId: 8
       },
       {
-        name: "Pizza Atún",
+        name: "Pizza Atun",
         price: 12.00,
         image: "pizzas_atun",
-        description: "Atún y cebolla",      
+        description: "Atun y cebolla",      
         type: "",
         categoryId: 8
       },
@@ -544,10 +544,10 @@ export const products = [
         categoryId: 8
       },
       {
-        name: "Pizza 4 Estaciones",
+        name: "Pizza Estaciones",
         price: 12.00,
         image: "pizzas_4_estaciones",
-        description: "Champiñon, atún, chorizo, Jamon York y Esparragos",      
+        description: "Champiñon, atun, chorizo, Jamon York y Esparragos",      
         type: "",
         categoryId: 8
       },
@@ -648,7 +648,7 @@ export const products = [
         categoryId: 10
       },
       {
-        name: "Marqués de Cáceres Crianza",
+        name: "Marques de Caceres Crianza",
         price: 17.00,
         image: "marques_caceres",
         description: "Vino de la Rioja",      
@@ -664,7 +664,7 @@ export const products = [
         categoryId: 10
       },
       {
-        name: "Barón de Ley Reserva",
+        name: "Baron de Ley Reserva",
         price: 18.50,
         image: "baron_ley",
         description: "Vino de la Rioja",      
@@ -864,7 +864,7 @@ export const products = [
         categoryId: 11
       },
       {
-        name: "Café Solo",
+        name: "Cafe Solo",
         price: 1.50,
         image: "cafe_solo",
         description: "Cafe Expresso",      
@@ -872,154 +872,154 @@ export const products = [
         categoryId: 12
       },
       {
-        name: "Café Con Leche",
+        name: "Cafe Con Leche",
         price: 2.50,
         image: "cafe_leche",
-        description: "Café Con Leche",      
+        description: "Cafe Con Leche",      
         type: "",
         categoryId: 12
       },
       {
-        name: "Café Americano",
+        name: "Cafe Americano",
         price: 2.00,
         image: "cafe_americano",
-        description: "Café Americano",      
+        description: "Cafe Americano",      
         type: "",
         categoryId: 12
       },
       {
-        name: "Café Cortado",
+        name: "Cafe Cortado",
         price: 1.60,
         image: "cafe_cortado",
-        description: "Café Cortado",      
+        description: "Cafe Cortado",      
         type: "",
         categoryId: 12
       },
       {
-        name: "Café Manchado",
+        name: "Cafe Manchado",
         price: 1.80,
         image: "cafe_manchado",
-        description: "Café Manchado",      
+        description: "Cafe Manchado",      
         type: "",
         categoryId: 12
       },
       {
-        name: "Café Capuchino",
+        name: "Cafe Capuchino",
         price: 4.50,
         image: "cafe_capuchino",
-        description: "Café Capuchino",      
+        description: "Cafe Capuchino",      
         type: "",
         categoryId: 12
       },
       {
-        name: "Café Bombón",
+        name: "Cafe Bombón",
         price: 2.00,
         image: "cafe_bombon",
-        description: "Café Bombón",      
+        description: "Cafe Bombón",      
         type: "",
         categoryId: 12
       },
       {
-        name: "Café con Alcohol Asiático",
+        name: "Cafe con Alcohol Asiático",
         price: 3.00,
         image: "cafe_alcohol_asiatico",
-        description: "Café con alcohol asiático",      
+        description: "Cafe con alcohol asiático",      
         type: "",
         categoryId: 13
       },
       {
-        name: "Café con Alcohol Irlandés",
+        name: "Cafe con Alcohol Irlandes",
         price: 6.00,
         image: "cafe_alcohol_irlandes",
-        description: "Café con alcohol irlandés",      
+        description: "Cafe con alcohol irlandes",      
         type: "",
         categoryId: 13
       },
       {
-        name: "Café con Alcohol Carajillo",
+        name: "Cafe con Alcohol Carajillo",
         price: 2.00,
         image: "cafe_alcohol_carajillo",
-        description: "Café con alcohol carajillo",      
+        description: "Cafe con alcohol carajillo",      
         type: "",
         categoryId: 13
       },
       {
-        name: "Café con Alcohol Carajillo Con Baily",
+        name: "Cafe con Alcohol Carajillo Con Baily",
         price: 2.50,
         image: "cafe_alcohol_carajillo_baily",
-        description: "Café con alcohol carajillo con baily",      
+        description: "Cafe con alcohol carajillo con baily",      
         type: "",
         categoryId: 13
       },
       {
-        name: "Café con Alcohol Belmonte",
+        name: "Cafe con Alcohol Belmonte",
         price: 2.00,
         image: "cafe_alcohol_belmonte",
-        description: "Café con alcohol belmonte",      
+        description: "Cafe con alcohol belmonte",      
         type: "",
         categoryId: 13
       },
       {
-        name: "Café con Alcohol Belmonte Con Baily",
+        name: "Cafe con Alcohol Belmonte Con Baily",
         price: 2.50,
         image: "cafe_alcohol_belmonte_baily",
-        description: "Café con alcohol belmonte con baily",      
+        description: "Cafe con alcohol belmonte con baily",      
         type: "",
         categoryId: 13
       },
       {
-        name: "Té Verde",
+        name: "Te Verde",
         price: 2.00,
         image: "te_verde",
-        description: "Té verde",      
+        description: "Te verde",      
         type: "",
         categoryId: 14
       },
       {
-        name: "Té Rojo",
+        name: "Te Rojo",
         price: 2.00,
         image: "te_rojo",
-        description: "Té rojo",      
+        description: "Te rojo",      
         type: "",
         categoryId: 14
       },
       {
-        name: "Té Negro",
+        name: "Te Negro",
         price: 2.00,
         image: "te_negro",
-        description: "Té negro",      
+        description: "Te negro",      
         type: "",
         categoryId: 14
       },
       {
-        name: "Té Menta Poleo",
+        name: "Te Menta Poleo",
         price: 2.00,
         image: "te_menta",
-        description: "Té menta poleo",      
+        description: "Te menta poleo",      
         type: "",
         categoryId: 14
       },
       {
-        name: "Té Rooibos",
+        name: "Te Rooibos",
         price: 2.00,
         image: "te_rooibos",
-        description: "Té rooibos",      
+        description: "Te rooibos",      
         type: "",
         categoryId: 14
       },
       {
-        name: "Té Frutos Del Bosque",
+        name: "Te Frutos Del Bosque",
         price: 2.00,
         image: "te_frutos",
-        description: "Té frutos del bosque",      
+        description: "Te frutos del bosque",      
         type: "",
         categoryId: 14
       },
       {
-        name: "Té Manzanilla",
+        name: "Te Manzanilla",
         price: 2.00,
         image: "te_manzanilla",
-        description: "Té manzanilla",      
+        description: "Te manzanilla",      
         type: "",
         categoryId: 14
       },

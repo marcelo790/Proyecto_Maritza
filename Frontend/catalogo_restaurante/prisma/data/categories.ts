@@ -45,15 +45,15 @@ export const categories = [
       },
       {
         slug: "cafe",
-        name: "Café"
+        name: "Cafe"
       },
       {
         slug: "cafe_con_alcohol",
-        name: "Café con alcohol"
+        name: "Cafe con alcohol"
       },
       {
         slug: "Infusiones_tes",
-        name: "Infusiones Y Tés"
+        name: "Infusiones Y Tes"
       },
       {
         slug: "cocteles",
