@@ -10,7 +10,7 @@ export function getImagePath(imagePath: string){
     if(imagePath.startsWith(cloudinaryBaseUrl)){
         return imagePath
     }else{
-        //return `/products/${imagePath}.jpg`
-        return `/products/plato.jpg`
+        return `/products/${imagePath}.jpg`
+        //return `/products/plato.jpg`
     }
 }

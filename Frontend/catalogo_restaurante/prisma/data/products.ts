@@ -216,9 +216,9 @@ export const products = [
         categoryId: 4
       },
       {
-        name: "Lengado a la Plancha",
+        name: "Lenguado a la Plancha",
         price: 21.00,
-        image: "lengado_a_la_plancha",
+        image: "lenguado_a_la_plancha",
         description: "",      
         type: "",
         categoryId: 4
