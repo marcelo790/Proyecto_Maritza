@@ -3,15 +3,52 @@ import { prisma } from '../../../src/lib/prisma';
 import Heading from '@/components/ui/Heading';
 
 
-async function getProducts(category: string) {
+type ProductWithTranslation = {
+  id: number
+  price: number
+  image: string
+  type: string
+  name: string
+  description: string
+  category: {
+    translations: { name: string }[]
+  }
+}
+
+// ✅ Traemos productos + traducciones y los mapeamos
+async function getProducts(category: string): Promise<ProductWithTranslation[]> {
   const products = await prisma.product.findMany({
     where: {
       category: {
         slug: category,
       },
     },
+    include: {
+      translations: {
+        where: { locale: 'es' },
+        select: { name: true, description: true },
+      },
+      category: {
+        include: {
+          translations: {
+            where: { locale: 'es' },
+            select: { name: true },
+          },
+        },
+      },
+    },
   })
-  return products
+
+  // Mapeamos para sacar directamente name y description
+  return products.map((p) => ({
+    id: p.id,
+    price: p.price,
+    image: p.image,
+    type: p.type,
+    name: p.translations[0]?.name ?? '',
+    description: p.translations[0]?.description ?? '',
+    category: p.category,
+  }))
 }
 
 export default async function OrderPage({ params }: { params: Promise<{ category: string }> }) {

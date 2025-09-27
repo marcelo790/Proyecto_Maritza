@@ -9,19 +9,35 @@ datasource db {
 }
 
 model Category {
-  id       Int       @id @default(autoincrement())
-  name     String
-  slug     String    @unique   // ✅ ahora cada slug debe ser único
-  products Product[]
+  id           Int                   @id @default(autoincrement())
+  slug         String                @unique // ✅ ahora cada slug debe ser único
+  products     Product[]
+  translations CategoryTranslation[]
+}
+
+model CategoryTranslation {
+  id         Int      @id @default(autoincrement())
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId Int
+  locale     String // 'es' o 'en'
+  name       String
 }
 
 model Product {
-   id  Int @id   @default(autoincrement())
-   name String 
-   price Float
-   image String
-   description String
-   type String
-   categoryId Int
-   category Category @relation(fields: [categoryId], references: [id])
+  id           Int                  @id @default(autoincrement())
+  price        Float
+  image        String
+  type         String
+  categoryId   Int
+  category     Category             @relation(fields: [categoryId], references: [id])
+  translations ProductTranslation[]
+}
+
+model ProductTranslation {
+  id          Int     @id @default(autoincrement())
+  product     Product @relation(fields: [productId], references: [id])
+  productId   Int
+  locale      String // 'es' o 'en'
+  name        String
+  description String
 }

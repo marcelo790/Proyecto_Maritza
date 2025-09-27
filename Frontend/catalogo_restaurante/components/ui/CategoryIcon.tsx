@@ -6,7 +6,11 @@ import { useParams } from 'next/navigation';
 
 
 type CategoryIconProps = {
-    category: Category
+    category: {
+        id: number;
+        slug: string;
+        name: string; // ✅ name ya viene traducido desde el sidebar
+    }
 }
 
 export default function CategoryIcon({category} : CategoryIconProps) {

@@ -3,7 +3,14 @@ import { Product } from "@prisma/client"
 import Image from "next/image"
 
 type ProductCardProps = {
-    product: Product
+  product: {
+    id: number
+    price: number
+    image: string
+    type: string
+    name: string
+    description: string
+  }
 }
 
 export default function ProductCard({product} : ProductCardProps) {
