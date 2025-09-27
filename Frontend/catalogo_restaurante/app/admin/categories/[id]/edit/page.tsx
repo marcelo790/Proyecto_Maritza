@@ -12,16 +12,20 @@ type EditCategoriesPageProps = {
   };
 }
 
-async function getCategoryById(id: number){
-    const category = await prisma.category.findUnique({
-        where: {
-            id,
-        }
-    })
-    if(!category){
-        notFound()
-    }
-    return category
+async function getCategoryById(id: number) {
+  const category = await prisma.category.findUnique({
+    where: { id },
+    include: {
+      translations: {
+        where: { locale: 'es' }, // o el idioma que uses
+        select: { name: true },
+      },
+    },
+  });
+
+  if (!category) notFound();
+
+  return category;
 }
 
 export default async function EditCategoriesPage({ params }: EditCategoriesPageProps) {
@@ -29,7 +33,7 @@ export default async function EditCategoriesPage({ params }: EditCategoriesPageP
 
   return (
     <>
-        <Heading>Editar Categoria: {category.name}</Heading>
+        <Heading>Editar Categoria: {category.translations[0]?.name ?? 'Sin nombre'}</Heading>
         <GoBackButton />
         <EditCategoryForm>
             <CategoryForm category={category}/>

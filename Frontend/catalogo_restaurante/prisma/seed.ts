@@ -7,10 +7,10 @@ const prisma = new PrismaClient();
 async function main() {
   try {
     console.log("🧹 Limpiando tablas y reiniciando IDs...");
-    await prisma.productTranslation.deleteMany();
-    await prisma.product.deleteMany();
-    await prisma.categoryTranslation.deleteMany();
-    await prisma.category.deleteMany();
+    await prisma.productTranslation.deleteMany()
+await prisma.product.deleteMany()
+await prisma.categoryTranslation.deleteMany()
+await prisma.category.deleteMany()
 
 
     console.log("📦 Insertando categorías...");

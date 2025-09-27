@@ -3,16 +3,28 @@ import CategorySearchForm from '@/components/categories/CategorySearchForm'
 import Heading from '@/components/ui/Heading'
 import { prisma } from '@/src/lib/prisma'
 
-async function searchCategories (searchTerm: string){
-    const categories = await prisma.category.findMany({
-        where: {
-            name: {
-                contains: searchTerm,
-                mode: 'insensitive'
-            }
-        }
-    })
-    return categories
+async function searchCategories(searchTerm: string) {
+  const categories = await prisma.category.findMany({
+    where: {
+      translations: {
+        some: {
+          locale: 'es', // el idioma que quieras
+          name: {
+            contains: searchTerm,
+            mode: 'insensitive',
+          },
+        },
+      },
+    },
+    include: {
+      translations: {
+        where: { locale: 'es' },
+        select: { name: true },
+      },
+    },
+  });
+
+  return categories;
 }
 
 export default async function SearchPage({searchParams}: {searchParams: {search: string}}) {

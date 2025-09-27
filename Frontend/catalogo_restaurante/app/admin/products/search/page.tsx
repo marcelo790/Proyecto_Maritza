@@ -3,19 +3,29 @@ import ProductTable from '@/components/products/ProductsTable'
 import Heading from '@/components/ui/Heading'
 import { prisma } from '@/src/lib/prisma'
 
-async function searchProducts (searchTerm: string){
-    const products = await prisma.product.findMany({
-        where: {
-            name: {
-                contains: searchTerm,
-                mode: 'insensitive'
-            }
+async function searchProducts(searchTerm: string) {
+  const products = await prisma.product.findMany({
+    where: {
+      translations: {
+        some: {
+          locale: 'es',
+          name: {
+            contains: searchTerm,
+            mode: 'insensitive',
+          },
         },
-        include: {
-            category: true
-        }
-    })
-    return products
+      },
+    },
+    include: {
+      category: true,
+      translations: {
+        where: { locale: 'es' },
+        select: { name: true, description: true },
+      },
+    },
+  });
+
+  return products;
 }
 
 export default async function SearchPage({searchParams}: {searchParams: {search: string}}) {
