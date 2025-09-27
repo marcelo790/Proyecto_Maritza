@@ -4,7 +4,7 @@ import { Category } from "@prisma/client"
 
 
 type CategoryFormProps = {
-    category?: Category
+  category?: Category & { name?: string } // agregamos name opcional
 }
 
 export default async function CategoryForm({category}: CategoryFormProps) {

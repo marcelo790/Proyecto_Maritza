@@ -2,8 +2,12 @@
 import { Category } from "@prisma/client"
 import Link from "next/link"
 
+type CategoryWithName = Category & {
+  name?: string // opcional si viene de otra tabla o del propio modelo
+}
+
 type CategoryTableProps = {
-    categories: Category[]
+  categories: CategoryWithName[]
 }
 
 export default function CategoryTable({categories} : CategoryTableProps) {
@@ -27,13 +31,13 @@ export default function CategoryTable({categories} : CategoryTableProps) {
                                 {categories.map(category => (
                                     <tr key={category.id}>
                                         <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
-                                            {category.name}
+                                            {category.name ?? category.slug}
                                         </td>
                                         <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-sm font-medium sm:pr-0">
                                             <Link
                                                 href={`/admin/categories/${category.id}/edit`}
                                                 className="text-indigo-600 hover:text-indigo-800"
-                                            >Editar <span className="sr-only">, {category.name}</span></Link>
+                                            >Editar <span className="sr-only">,{category.name ?? category.slug}</span></Link>
                                         </td>
                                     </tr>
                                 ))}
