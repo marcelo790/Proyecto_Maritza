@@ -7,10 +7,11 @@ const prisma = new PrismaClient();
 async function main() {
   try {
     console.log("🧹 Limpiando tablas y reiniciando IDs...");
-    await prisma.$executeRawUnsafe(`
-      TRUNCATE TABLE "ProductTranslation", "CategoryTranslation", "Product", "Category"
-      RESTART IDENTITY CASCADE
-    `);
+    await prisma.productTranslation.deleteMany();
+    await prisma.product.deleteMany();
+    await prisma.categoryTranslation.deleteMany();
+    await prisma.category.deleteMany();
+
 
     console.log("📦 Insertando categorías...");
     for (const cat of categories) {

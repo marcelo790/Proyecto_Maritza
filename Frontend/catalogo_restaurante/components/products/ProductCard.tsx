@@ -1,6 +1,8 @@
+'use client'
 import { formatCurrency, getImagePath } from "@/src/utils"
 import { Product } from "@prisma/client"
 import Image from "next/image"
+import { useState } from "react"
 
 type ProductCardProps = {
   product: {
@@ -15,16 +17,20 @@ type ProductCardProps = {
 
 export default function ProductCard({product} : ProductCardProps) {
 
-    const imagePath = getImagePath(product.image)
+    const paths = getImagePath(product.image);
+    const [imgSrc, setImgSrc] = useState(paths[0]);
   return (
     <div className="card-producto relative max-w-md aspect-[4/3]">
         <img 
             width={400}
             height={500}
-            src={imagePath} 
+            src={imgSrc} 
             //src={`/products/${product.image}.png`} 
             alt={`Producto ${product.name}`}
             className="object-cover"
+            onError={() => {
+                if (imgSrc === paths[0] && paths[1]) setImgSrc(paths[1]);
+                }}
             style={{WebkitMaskImage: "url('/marco.png')",
                 WebkitMaskRepeat: "no-repeat",
                 WebkitMaskSize: 'cover',
