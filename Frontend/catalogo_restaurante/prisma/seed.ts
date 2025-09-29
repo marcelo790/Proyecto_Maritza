@@ -1,22 +1,21 @@
+
 import { PrismaClient } from "@prisma/client";
 import { categories } from "./data/categories";
 import { products } from "./data/products";
 
 const prisma = new PrismaClient();
 
-// Tipos de datos
 type TranslationInput = { locale: string; name: string; description?: string };
-
 type CategoryInput = {
+  id: number; // ⚠ aseguramos que tenga ID fijo en data/categories.ts
   slug: string;
   translations: Omit<TranslationInput, "description">[];
 };
-
 type ProductInput = {
   price: number;
   image: string;
   type: string;
-  categoryId: number; // usamos el ID directamente
+  categoryId: number; // ⚠ volvemos a usar categoryId numérico
   translations: TranslationInput[];
 };
 
@@ -29,21 +28,21 @@ async function main() {
     `;
 
     console.log("📦 Insertando categorías...");
-    const createdCategories = await Promise.all(
-      (categories as CategoryInput[]).map((cat) =>
-        prisma.category.create({
-          data: {
-            slug: cat.slug,
-            translations: {
-              create: cat.translations.map((t) => ({
-                locale: t.locale,
-                name: t.name,
-              })),
-            },
+    for (const cat of categories as CategoryInput[]) {
+      await prisma.category.create({
+        data: {
+          id: cat.id, // ⚠ insertamos el mismo ID que luego usarán los productos
+          slug: cat.slug,
+          translations: {
+            create: cat.translations.map((t) => ({
+              locale: t.locale,
+              name: t.name,
+            })),
           },
-        })
-      )
-    );
+        },
+      });
+      console.log(`✅ Categoría insertada: ${cat.slug} (ID: ${cat.id})`);
+    }
 
     console.log("📦 Insertando productos...");
     for (const prod of products as ProductInput[]) {
@@ -52,7 +51,7 @@ async function main() {
           price: prod.price,
           image: prod.image,
           type: prod.type,
-          categoryId: prod.categoryId, // asignamos directamente el ID
+          categoryId: prod.categoryId, // ⚠ ya coincide porque lo pusimos en el dataset
           translations: {
             create: prod.translations.map((t) => ({
               locale: t.locale,
@@ -70,12 +69,13 @@ async function main() {
       );
     }
 
-    console.log("🎉 Seed completado con traducciones");
+    console.log("🎉 Seed completado con IDs consistentes");
   } catch (err: any) {
-    console.error("❌ Error en seed general:", err.message);
+    console.error("❌ Error en seed:", err.message);
   } finally {
     await prisma.$disconnect();
   }
 }
 
 main();
+
