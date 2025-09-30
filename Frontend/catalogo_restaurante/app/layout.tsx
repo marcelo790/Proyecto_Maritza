@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
+import { LocaleProvider } from "@/src/context/LocaleContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +29,10 @@ export default function RootLayout({
       <body
         className={`bg-gray-100`}
       >
-        {children}
-        <ToastContainer position="top-right" autoClose={3000} />
+        <LocaleProvider>
+          {children}
+          <ToastContainer position="top-right" autoClose={3000} />
+        </LocaleProvider>
       </body>
     </html>
   );
