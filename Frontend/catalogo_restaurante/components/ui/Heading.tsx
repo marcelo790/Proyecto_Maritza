@@ -20,6 +20,7 @@ type Props = {
 export default function Heading({ category, locale }: Props) {
   const [products, setProducts] = useState<ProductWithTranslation[]>([])
 
+  
   useEffect(() => {
     async function fetchProducts() {
       try {
