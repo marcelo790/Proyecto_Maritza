@@ -103,4 +103,7 @@
     font-style: normal;
     font-weight: bold
 }
+@media (width >= 40rem) {
+  
+}
 

@@ -35,7 +35,7 @@ export default function Heading({ category, locale }: Props) {
   }, [category, locale])
 
   return (
-    <div className="grid grid-cols-1 xl:grid-cols-3 2xl:grid-cols-4 gap-16 items-start mx-10">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 items-start mx-4 md:mx-10">
       {products.map(p => (
         <ProductCard key={p.id} product={p} />
       ))}
