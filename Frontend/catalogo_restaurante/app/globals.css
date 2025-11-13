@@ -103,7 +103,7 @@
     font-style: normal;
     font-weight: bold
 }
-@media (min-width: 412px) {
+@media (max-width: 412px) {
   .logo{
     width: 100px;
     height:100px;
