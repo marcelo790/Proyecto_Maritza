@@ -19,7 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <main className="contenedor-derecho md:flex-1 md:h-screen overflow-y-auto">
         <div className="headTitle flex items-center gap-4 my-10 mx-10">
           <h1 className="text-2xl font-bold text-white">EL RINCON DE MARITZA</h1>
-          <LanguageSwitcher locale={locale} onChange={setLocale} />
+          <div className='headIdioma'>
+            <LanguageSwitcher locale={locale} onChange={setLocale} />
+          </div>
         </div>
         <Heading category={selectedCategory} locale={locale} />
       </main>

@@ -7,7 +7,7 @@ type Props = {
 
 export default function LanguageSwitcher({ locale, onChange }: Props) {
   return (
-    <div className="headIdioma flex items-center gap-1 bg-white/20 rounded-md px-2 py-1 ml-20 border border-white/30 shadow-sm">
+    <div className="flex items-center gap-1 bg-white/20 rounded-md px-2 py-1 ml-20 border border-white/30 shadow-sm">
       <span className="text-white font-semibold text-sm"> {locale === 'es' ? 'Idioma: ' : 'Language: '}</span>
       <select
         value={locale}

@@ -139,8 +139,13 @@
     text-align: center;
   }
  .headIdioma{
+  width:100%;  
+    align-items: center;
+   
+ }
+ .headIdioma div{
   width:8rem;
-   span{
+  span{
     font-size:10px;
    }
    select{
@@ -165,7 +170,7 @@
 
     img{
       width:100%;
-      height:100px;
+      height:auto;
     }
     //box-shadow: 0 -4px 8px rgba(44, 118, 0, 0.9);
 }
@@ -202,3 +207,112 @@
 
 }
 
+@media (min-width: 412px) and (max-width: 930px) {
+  .logo{
+    width: 150px;
+    height:150px;
+  }
+  .contenedor{
+    display:flex;
+  }
+  .contenedor-izquierdo {
+    width: 20%;       /* ancho del sidebar en desktop */
+    flex-shrink: 0;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  
+  .link-category{
+    font-family: 'Zuumerough-Bold';
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    gap: 0.7rem;
+    padding: 0 0 0.2rem 0.5rem;
+}
+
+.contenedor-derecho{
+    width: 80%;
+    gap:1rem
+  }
+  .headTitle{
+    margin:0.5rem;
+    display:block;
+    text-align:center;
+    align-items: center;       /* centra verticalmente */
+  justify-content: center;
+  }
+ .headIdioma {
+  width: 100%;
+  display: flex;
+  align-items: center;       /* centra verticalmente */
+  justify-content: center;   /* centra horizontalmente */
+}
+
+.headIdioma div {
+  width: 8rem;
+}
+
+.headIdioma div span {
+  font-size: 10px;
+}
+
+.headIdioma div select {
+  font-size: 10px;
+}
+
+  .contenedor-derecho h1{
+        color: #ff4500;
+        font-size: 2.5rem;
+        letter-spacing: 0.1em;
+        font-family: 'Zuumerough-Bold';
+    }
+
+.card-producto{    
+    color: #ffffff;
+    text-align: center;    
+    display: flex;            /* activa Flexbox */
+    flex-direction: column;   /* organiza hijos en columna */
+    justify-content: center;  /* centra verticalmente */
+    align-items: center; 
+
+    img{
+      width:100%;
+      height:auto;
+    }
+    //box-shadow: 0 -4px 8px rgba(44, 118, 0, 0.9);
+}
+
+.detalle-producto{
+  line-height: 1;
+  color: #ffffff;
+    text-align: center;       /* centra texto dentro de elementos inline o block */
+    font-family: 'Zuumerough-Bold';
+}
+
+.detalle-producto h3{  
+  color: #ffffff;
+    text-align: center;       /* centra texto dentro de elementos inline o block */
+    font-family: 'Zuumerough-Bold';
+    font-size: 1.5rem;
+    letter-spacing: 0.03em;
+}
+
+.detalle-producto p{  
+  color: #ffffff;
+    text-align: center;       /* centra texto dentro de elementos inline o block */
+    font-family: 'Zuumerough-Bold';
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+}
+
+.parrafo-precio{
+  color: #ffffff;
+    font-family: sans-serif !important;
+    font-style: normal;
+    font-weight: bold
+}
+
+}
